@@ -14,22 +14,22 @@ public class UserService implements UserServiceInterface {
 
 
     public List<User> findAll(){
-        return userRepo.findAll();
+        return this.userRepo.findAll();
     }
 
     @Override
     public Optional<User> findById(Long userId) {
-        return userRepo.findById(userId);
+        return this.userRepo.findById(userId);
     }
 
     @Override
     public List<User> findByAccelerationName(String name) {
-        return userRepo.findByCandidatesIdAccelerationName(name);
+        return this.userRepo.findByCandidatesIdAccelerationName(name);
     }
 
     @Override
     public List<User> findByCompanyId(Long companyId) {
-        return userRepo.findByCandidatesIdCompanyId(companyId);
+        return this.userRepo.findByCandidatesIdCompanyId(companyId);
     }
 
     @Override
