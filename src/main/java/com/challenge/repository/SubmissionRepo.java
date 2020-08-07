@@ -1,13 +1,14 @@
 package com.challenge.repository;
 
 import com.challenge.entity.Submission;
+import com.challenge.entity.SubmissionId;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-public interface SubmissionRepo extends CrudRepository<Submission, Long> {
+public interface SubmissionRepo extends CrudRepository<Submission, SubmissionId> {
 
     @Query(value = "select * from submission sm inner join" +
             " acceleration ac on sm.challenge_id=ac.challenge_id" +
