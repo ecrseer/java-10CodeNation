@@ -11,6 +11,12 @@ import java.util.Optional;
 
 public class UserService implements UserServiceInterface {
     @Autowired private UserRepo userRepo;
+
+
+    public List<User> findAll(){
+        return userRepo.findAll();
+    }
+
     @Override
     public Optional<User> findById(Long userId) {
         return userRepo.findById(userId);
